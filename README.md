@@ -10,7 +10,7 @@ A `infrastructure/docker-compose` file starts these required services.
 Run: 
 
 ```shell
-docker-compose -f ./infratructure/docker-compose.yaml up
+docker-compose -f ./infrastructure/docker-compose.yaml up
 ```
 
 Once started (can take a few minutes), open http://localhost:8180/auth/admin/ and login with `admin/admin`.
@@ -47,8 +47,7 @@ mvn -B clean verify -f quarkus/pom.xml
 Run it with:
 
 ```bash
-java -jar quarkus/target/universal-todo-spring-1.0.0-SNAPSHOT-runner.jar 
-``` 
+java -jar quarkus/target/quarkus-app/quarkus-run.jar``` 
 
 To build the native executable, run:
 
@@ -61,7 +60,3 @@ Run the native-executable with:
 ```bash
 quarkus/target/universal-todo-quarkus-1.0.0-SNAPSHOT-runner
 ```
-
-
-
-       run:     
