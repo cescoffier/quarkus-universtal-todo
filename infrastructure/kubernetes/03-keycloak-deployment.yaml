@@ -40,6 +40,7 @@ spec:
           resources: {}
           volumeMounts:
             - mountPath: /tmp/quarkus_realm.json
+              subPath: quarkus_realm.json
               name: keycloak-realm
       restartPolicy: Always
       volumes:
