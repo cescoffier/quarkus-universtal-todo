@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    kompose.cmd: ./kompose convert -f ./infrastructure/docker-compose.yaml
+    kompose.version: 1.26.1 (a9d05d509)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: keycloak
+  name: keycloak
+  namespace: quarkus-universal-todo
+spec:
+  ports:
+    - name: "8180"
+      port: 8180
+      targetPort: 8080
+  selector:
+    io.kompose.service: keycloak
+status:
+  loadBalancer: {}
